@@ -2,18 +2,22 @@ package com.example.demo.View.model;
 
 public class ProdutoResponse {
     
+    //#region Atributes
     private Integer id;
     
     private String name;
 
-    private Integer quantity;
+    private Integer quantidade;
 
-    private Double value;
-
+    private Double valor;
+    //#endregion
+    
+    //#region Getters and Setters
+    
     public Integer getId() {
         return id;
     }
-
+    
     public void setId(Integer id) {
         this.id = id;
     }
@@ -26,24 +30,26 @@ public class ProdutoResponse {
         this.name = name;
     }
 
-    public Integer getQuantity() {
-        return quantity;
+    public Integer getQuantidade() {
+        return quantidade;
     }
 
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public Double getValue() {
-        return value;
+    public Double getValor() {
+        return valor;
     }
 
-    public void setValue(Double value) {
-        this.value = value;
+    public void setValor(Double valor) {
+        this.valor = valor;
     }
+    //#endregion
 
+    //#region Constructor
+    
     public ProdutoResponse() {
     }
-
-    
+    //#endregion
 }
