@@ -35,10 +35,11 @@ public class ProdutoController {
 
     @GetMapping
     public ResponseEntity<List<ProdutoResponse>> obterTodos(){
-        List<ProdutoDTO> produto =  produtoServices.obterTodos();
+        List<ProdutoDTO> produtos =  produtoServices.obterTodos();
         ModelMapper mapper = new ModelMapper();
-        List<ProdutoResponse> resposta = produto.stream().map(produtoDto -> mapper.map(produto,ProdutoResponse.class)).collect(Collectors.toList());
-        return new ResponseEntity<>(resposta,HttpStatus.OK);    
+        List<ProdutoResponse> resposta = produtos.stream().map(produtoDto -> mapper.map(produtoDto,ProdutoResponse.class))
+        .collect(Collectors.toList());
+        return new ResponseEntity<>(resposta, HttpStatus.OK);
     }
 
     @GetMapping("/{id}")

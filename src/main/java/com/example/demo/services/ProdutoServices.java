@@ -24,7 +24,8 @@ public class ProdutoServices {
      */
     public List<ProdutoDTO> obterTodos(){
         List<Produto> produtos = produtoRepository.findAll();
-        return produtos.stream().map(produto -> new ModelMapper().map(produto, ProdutoDTO.class)).collect(Collectors.toList());
+        return produtos.stream().map(produto -> new ModelMapper().map(produto, ProdutoDTO.class))
+        .collect(Collectors.toList());
     }
     
     /**
